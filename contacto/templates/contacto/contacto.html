@@ -1,0 +1,77 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+    {% if user.is_authenticated %}
+
+      
+        <div class="col-sm-12 col-lg-10 mx-auto py-5">
+            
+            <div class="card">
+                <div class="card-body" style="margin: 10px;">
+                  {% if messages %}
+                    {%for messages in messages %}
+          
+                      <div class="notification">
+                        <h4> {{messages}} </h4>
+                      </div>  
+            
+                    {% endfor %}
+                  {% endif %}
+                    <div class="card-title" style="text-align: center;">
+                        <h2>¿En que te podemos ayudar?</h2>
+                    </div>
+ 
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group row">
+                        
+                          <div class="col-sm-6" >
+            
+                            <input type="text" readonly class="form-control-plaintext from-definido" id="staticEmail" name="nombre" value="{{ user.first_name }}" required>
+                          </div>
+
+                         
+                          <div class="col-sm-6"> 
+                            <input type="text" readonly class="form-control-plaintext from-definido" id="staticEmail" name="email" value=" {{ user.email }}" required>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            
+                          <div class="col-sm-12">
+                            <label>Asunto:</label>
+                            <input type="text" class="form-control" id="inputText" placeholder="Asunto" name="asunto" required>
+                          </div>
+                        
+                          
+                        </div>
+                        <div class="form-group">
+                            <label for="">Contenido:</label>
+                            <textarea name="contenido" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Contenido" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" >Enviar</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    {% else %}
+
+        <div class="container col-6 mx-auto my-2  p-4">
+
+              <h2 class="mx-auto ">
+                INICIE SESION
+              </h2>
+              <p class="mx-4">
+                por favor antes de continuar se le pide que <a href=""> <b>inicie sesion.</b> </a> <br>
+                ¿es tu primera ves por aqui? registra de forma gratuita hacien click<a href=""><b> aqui </b></a>
+              </p>
+
+        </div>
+
+    {% endif %}
+
+
+{% endblock %}

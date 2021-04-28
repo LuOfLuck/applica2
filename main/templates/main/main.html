@@ -1,0 +1,88 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- primer bloque -->
+    <div class="main bg-dark">
+
+        <div class="col-12 py-2">
+
+            <div class="row">
+        
+                <div class="col-sm-12 col-md-7 titulo mx-auto pt-5 pb-0">
+
+                    <h1 id="titulo" class="titulo-h1"> Sitios webs profesional </h1>
+
+                    <h4 id="subtitulo" class="titulo-h4">Soy Lucas permite mostrarte como trabajo</h4><hr>
+
+                </div>
+        
+            </div>
+
+            <div class="row">
+                
+                <div class="linea col-md-2 my-auto p-0 ml-0">
+
+                    <hr><br><hr><br><hr><br><hr><br>
+
+                </div>
+
+                <div class="col-md-6 mx-auto my-auto">
+                    <p id="biografia">
+                        La poesía dramática es aquella cuya acción se desarrolla mediante diálogos. Cuando el poema está consagrado a 
+                        un hecho solemne e incluye un final trágico, la obra pertenece a la tragedia. En cambio, cuando el argumento es
+                        más ligero y su final es feliz, estamos ante una comedia. Por último, cuando el asunto del texto es tratado de 
+                        manera jocosa, tenemos el sainete.<br><br>
+                        puto el que lo de arriba lo saque de internet
+                    </p>
+                </div>    
+            
+                <div class="col-10 col-sm-6 col-md-2 cont">
+                    <ul id="lista">
+
+                        <li><h6>PRUEBA JEFE</h6></li>
+                        <li> <p>un poquito de texto por aqui para probar </p></li>
+                        <li> <p>un poquito de texto por aqui para probar </p></li>
+                        <li> <p>un poquito de texto por aqui para probar </p></li>
+                        <li> <p>un poquito de texto por aqui para probar </p></li>
+                        <li> <p>un poquito de texto por aqui para probar </p></li>
+                        <li> <p>un poquito de texto por aqui para probar </p></li>
+                    
+                    </ul>
+                </div> 
+
+            </div>
+
+            <br>
+        
+        </div>
+
+    </div>
+
+    <!-- segundo bloque -->
+
+    <div class="row my-4">
+        {% for proyecto in proyectos%}
+        <div class="col-9 col-sm-10 col-md-5 my-3 mx-auto con-pagina">
+            <div class="col-md-8 mx-auto my-4 titulo ">
+                <h2>{{proyecto.nombre}}</h2>
+            </div>
+            <div class="col-md-12 mx-auto contenido">
+                <p>
+                    {{proyecto.descripcion}}
+                </p>
+            </div>
+            <div class="col-12 col-md-12 botones">
+                <a href="{{proyecto.codigo_fuente}}" class="col-4 col-sm-5 btn btn-outline-success float-left mb-4 btn-i" target="_blank"> <span>codigo fuente</span>  </a>
+                <a href="{{proyecto.url}}" class="col-4 col-sm-5 btn btn-outline-success float-right mb-4 btn-d" target="_blank"> <span> Visitar Volder </span> </a>
+            </div>  
+        </div>
+        {% endfor %}
+        
+    </div>
+
+  
+
+
+
+{% endblock %}

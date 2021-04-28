@@ -1,0 +1,121 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: hsl(0, 0%, 98%);
+}
+
+p, h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 100%);
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+	margin: 0 !important;
+}
+li{
+	list-style: none;
+}
+#titulo:scope, #subtitulo:read-only{
+	font-size: 5rem;
+}
+hr{
+	background-color: rgb(255, 255, 255);
+}
+#lupa-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.btn-lupa{
+	border:0px !important;
+}
+.btn-lupa:hover{
+	background-color: rgba(247, 134, 41, 0.863);
+}
+
+#btn-personalisados{
+	border-radius: 200px;
+	height: auto !important;
+	margin:auto;
+}
+
+.hidden{
+	display: none!important;
+}
+
+.cont{
+	height: 50vh;
+	border: 2px white solid;
+	border-radius: 5px;
+	margin: auto;
+	overflow-x: auto;
+}
+.cont li{
+	list-style: none;
+	padding: 8px;
+	text-align: center;
+	max-height: 100px;
+}
+.linea{
+	display: none;
+}
+@media (min-width: 768px) {
+	.linea{
+		display: block;
+
+	}
+}
+.con-pagina{
+	border: 1px black solid;
+	border-radius: 10px;
+}
+
+.contenido p{
+	color:rgb(71, 71, 71);
+	text-align: left;	
+}
+.titulo h2{
+	color:black;
+	text-align: center;
+}
+.botones .btn-d:hover span{
+	transition: 0.5s;
+	padding-right: 10px;
+}
+
+.botones .btn-i:hover span{
+	transition: 0.5s;
+	padding-left: 10px;
+}
+
+.img{
+	height: 100px;
+	width: 100px;
+	display:block;
+	margin:auto;
+}
+.links a{
+	color: rgba(70, 70, 70, 0.726);
+}
+.links a:hover{
+	transition: 0.3s;
+	color:rgb(255, 255, 255);
+}
+.redes{
+	color: rgba(70, 70, 70, 0.726);
+}
+.fab{
+	font-size: 25px;
+}
+.container{
+	border: 1px solid;
+}
+.card-title h2, .notification h4, .container h2, .container p{
+	color: black;
+}
+.from-definido{
+	text-align:center;
+}

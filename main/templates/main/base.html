@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Hola soy Lu</title>
+    
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+            <div class="col-sm-12 col-md-1">
+
+                <a class="navbar-brand  mx-auto" href="{% url 'Home' %}"> Lu_Of_Luck </a>
+
+                <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <div class="form-inline col-sm-12 col-md-7 my-2 my-lg-0 mx-auto">
+                  
+                    <a href="https://github.com/LuOfLuck" type="button" class="btn btn-success col-sm-3 col-md-3 my-2" id="btn-personalisados" target="BLANK">git-hub</a>
+                    
+                    <a href="{% url 'contacto' %}" type="button" class="btn btn-success col-sm-3 col-md-3 my-2" id="btn-personalisados">contactame</a>
+                    
+                    <a href="" type="button" class="btn btn-success col-sm-3 col-md-3 my-2" id="btn-personalisados">tienda</a>
+
+                </div>
+
+                <form class="form-inline my-2 col-xs-12 col-sm-12 col-md-4">
+
+                    <input class="form-control col-xs-2 col-10 col-sm-10 col-md-8 my-2" type="search" placeholder="Search" aria-label="Search">
+
+                    <button class="btn  my-2 btn-lupa col-1 col-sm-1 col-md-3 ml-3" type="submit">     
+
+                        <img class="mx-auto" id="lupa-icon" src="{% static 'img/lupa.png' %}">
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </nav>
+
+        {% block content%}
+        
+        {% endblock %}
+
+        <script src="{% static 'js/main.js' %}"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <footer class="" style="background-color: rgba(151, 151, 151, 0.85);">
+    
+            <div class="row">
+    
+                <div class="col-12 col-sm-3 mx-auto">
+    
+                    <img src="{% static 'img/logo.png' %}" class="my-3 img">
+    
+                </div>
+    
+                <div class="col-10 col-sm-5 m-auto">
+    
+                    <p class="links">
+    
+                        <a href="#"> politica y privacidad </a> / 
+    
+                        <a href="#"> cookies </a> / 
+    
+                        <a href="#"> suport </a>
+    
+                    </p>
+ 
+                </div>
+                <div class="col-3 col-sm-3 m-auto">
+    
+                    <ul>
+    
+                        <li>
+    
+                            <a href="https://www.instagram.com/lugically_cosmic/" class="redes" target="_blank"> 
+    
+                                <i class="fab fa-instagram"></i>
+    
+                                <span>instagram</span>
+    
+                            </a>
+    
+                        </li>
+    
+                        <li>
+    
+                            <a href="https://www.facebook.com/lu.de.luck" class="redes" target="_blank">
+    
+                                <i class="fab fa-facebook"></i>
+    
+                                <span>facebook</span>
+    
+                            </a>
+    
+                        </li>
+    
+                        <li>
+    
+                            <a href="https://github.com/LuOfLuck/" class="redes" target="_blank">
+    
+                                <i class="fab fa-github"></i>
+    
+                                <span>GitHub</span>
+    
+                            </a>
+                            
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+            </div>
+    
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    
+                © 2020 Copyright:<a class="text-dark" href="#">Applica2.com</a>
+                
+            </div>
+
+        </footer> 
+        
+    </body>
+
+</html>
